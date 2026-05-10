@@ -1,0 +1,31 @@
+/* config.css — Edit this file to change site appearance */
+:root {
+  /* Colors */
+  --bg:           #F5F1EC;
+  --bg-alt:       #EDE8E0;
+  --bg-card:      #FFFFFF;
+  --text:         #2E2A25;
+  --text-muted:   #7A7168;
+  --sage:         #7A9E82;
+  --sage-light:   #C9DFC9;
+  --clay:         #BF9475;
+  --clay-light:   #EDD9C8;
+  --white:        #FFFFFF;
+  --border:       #DDD6CC;
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans:  'DM Sans', system-ui, sans-serif;
+
+  /* Layout */
+  --max-w: 1100px;
+  --section-py: 96px;
+  --radius: 16px;
+
+  /* Animation timings */
+  --photo-fade:     5s;    /* service photo cross-fade duration */
+  --photo-hold:     5s;   /* interval between photo swaps (hold + fade) */
+  --divider-parallax-range: 20; /* % of image height the divider parallax shifts */
+  --hero-parallax:  0.12;  /* hero title parallax strength (fraction of scroll px) */
+  --hero-lerp:      0.05;  /* hero parallax smoothing (lower = more lag) */
+}

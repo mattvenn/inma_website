@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Inma Piqueras Ramos — Dance Movement Psychotherapist, Supervisor and Trainer based in Valencia, Spain. Individual and group therapy, supervision, and training." />
+  <title>Inma Piqueras Ramos · Move Into Being</title>
+
+  <!-- Favicon placeholder -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+
+  <!-- Design tokens first, then site styles -->
+  <link rel="stylesheet" href="config.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-lang="en">
+
+<!-- ===========================
+     HEADER / NAV
+     =========================== -->
+<header id="site-header" role="banner">
+  <div class="container">
+    <nav class="nav-inner" aria-label="Main navigation">
+
+      <a href="#hero" class="nav-logo" aria-label="Inma Piqueras Ramos — home">
+        <span class="logo-name">Inma Piqueras Ramos</span>
+        <span class="logo-tagline">Move Into Being</span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#hero"
+               data-en="Home"
+               data-es="Inicio">Home</a></li>
+        <li><a href="#services"
+               data-en="Services"
+               data-es="Servicios">Services</a></li>
+        <li><a href="#about"
+               data-en="About"
+               data-es="Sobre mí">About</a></li>
+        <li><a href="#testimonials"
+               data-en="Testimonials"
+               data-es="Testimonios">Testimonials</a></li>
+        <li><a href="#contact"
+               data-en="Contact"
+               data-es="Contacto">Contact</a></li>
+      </ul>
+
+      <div class="lang-toggle" role="group" aria-label="Language selection">
+        <button class="lang-btn active"
+                data-lang="en"
+                aria-pressed="true"
+                aria-label="Switch to English">EN</button>
+        <button class="lang-btn"
+                data-lang="es"
+                aria-pressed="false"
+                aria-label="Cambiar a español">ES</button>
+      </div>
+
+      <button id="nav-hamburger"
+              class="nav-hamburger"
+              aria-label="Open navigation menu"
+              aria-expanded="false"
+              aria-controls="nav-mobile">☰</button>
+
+    </nav>
+
+    <!-- Mobile dropdown nav -->
+    <nav id="nav-mobile" class="nav-mobile" aria-label="Mobile navigation">
+      <a href="#hero"
+         data-en="Home"
+         data-es="Inicio">Home</a>
+      <a href="#services"
+         data-en="Services"
+         data-es="Servicios">Services</a>
+      <a href="#about"
+         data-en="About"
+         data-es="Sobre mí">About</a>
+      <a href="#testimonials"
+         data-en="Testimonials"
+         data-es="Testimonios">Testimonials</a>
+      <a href="#contact"
+         data-en="Contact"
+         data-es="Contacto">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+<!-- ===========================
+     HERO
+     =========================== -->
+<section id="hero" aria-label="Introduction">
+
+  <div class="hero-bg" aria-hidden="true">
+    <img src="images/body_mapping/green_foot.jpg" alt="" />
+  </div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="hero-content">
+
+      <span class="hero-eyebrow"
+            data-en="Movement Psychotherapy"
+            data-es="Psicoterapia por el Movimiento">Movement Psychotherapy</span>
+
+      <h1 class="hero-title" aria-label="Move Into Being">
+        <span class="hero-title-move">Move</span>
+        <span class="hero-title-into">Into</span>
+        <span class="hero-title-being">Being</span>
+      </h1>
+
+      <p class="hero-subtitle"
+         data-en="Dance Movement Psychotherapist &middot; Supervisor &middot; Trainer"
+         data-es="Danza Movimiento Terapeuta &middot; Supervisora &middot; Formadora">Dance Movement Psychotherapist &middot; Supervisor &middot; Trainer</p>
+
+      <p class="hero-intro"
+         data-en="A place from which to find, heal and transform yourself."
+         data-es="Un espacio desde el cual encontrar, sanar y transformarte.">A place from which to find, heal and transform yourself.</p>
+
+      <div class="hero-ctas">
+        <a href="#contact"
+           class="btn btn-primary"
+           data-en="Book a free consultation"
+           data-es="Reserva una consulta gratuita">Book a free consultation</a>
+        <a href="#services"
+           class="btn btn-outline-light"
+           data-en="Learn more"
+           data-es="Saber más">Learn more</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===========================
+     SERVICES
+     =========================== -->
+<section id="services" aria-labelledby="services-heading">
+  <div class="container">
+    <h2 id="services-heading" class="section-heading"
+        data-en="What I Offer"
+        data-es="Lo Que Ofrezco">What I Offer</h2>
+  </div>
+
+  <!-- Service 1: DMP — photo LEFT -->
+  <article class="service-section" data-images='["images/dmp/floating_scarf.JPG","images/dmp/fun_scarfs.JPG"]' aria-label="Dance Movement Psychotherapy">
+    <div class="service-header">
+      <div class="service-photo-col">
+        <img class="service-photo"
+             src="images/dmp/floating_scarf.JPG"
+             alt="A colourful scarf floating through the air during a movement session" />
+      </div>
+      <div class="service-text-col">
+        <span class="service-label" data-en="Psychotherapy" data-es="Terapia">Psychotherapy</span>
+        <h3 class="service-title"
+            data-en="Dance Movement Psychotherapy"
+            data-es="Danza Movimiento Terapia">Dance Movement Psychotherapy</h3>
+        <p class="service-short lang-en">Individual and group Dance Movement Psychotherapy sessions for adults. Face-to-face or online. First 30-minute consultation is free.</p>
+        <p class="service-short lang-es">Sesiones individuales y grupales de Danza Movimiento Terapia para adultos. Presencial o en línea. Primera consulta de 30 minutos gratuita.</p>
+        <button class="service-expand-btn" aria-expanded="false">
+          <span class="lang-en">Read more</span><span class="lang-es">Leer más</span>
+          <span class="service-expand-arrow">↓</span>
+        </button>
+      </div>
+    </div>
+    <div class="service-drawer" aria-hidden="true">
+      <div class="service-drawer-inner">
+        <div class="lang-en">
+          <p>Dance Movement Psychotherapy (DMP) is an integrative and humanistic approach that uses movement and body awareness as a pathway to psychological wellbeing. Drawing on attachment theory, trauma-informed practice, Gestalt and somatic approaches, our work together honours the wisdom of the body.</p>
+          <p>Sessions are available individually or in groups, face-to-face in Valencia or online worldwide. A free 30-minute initial consultation lets us explore whether working together feels right.</p>
+          <p><strong>Fees:</strong> €55 per individual session (50 min). Group session fees vary — please get in touch for details.</p>
+        </div>
+        <div class="lang-es">
+          <p>La Danza Movimiento Terapia (DMT) es un enfoque integrador y humanista que utiliza el movimiento y la conciencia corporal como vía hacia el bienestar psicológico. Basándonos en la teoría del apego, la práctica informada en trauma, la Gestalt y los enfoques somáticos, nuestro trabajo honra la sabiduría del cuerpo.</p>
+          <p>Las sesiones están disponibles de forma individual o grupal, en Valencia o en línea. Una consulta inicial gratuita de 30 minutos nos permite explorar si trabajar juntas/os nos parece adecuado.</p>
+          <p><strong>Honorarios:</strong> €50 por sesión individual (50 min). Las sesiones de grupo varían — contáctame para más información.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Service 2: Body Mapping — photo RIGHT -->
+  <article class="service-section service-section--flip" data-images='["images/body_mapping/lying_down_drawing.JPG","images/body_mapping/bluebody.jpg","images/body_mapping/hand_reaching.jpg","images/body_mapping/hand_string.jpg","images/body_mapping/lying_down.jpg"]' aria-label="Somatic Body Mapping">
+    <div class="service-header">
+      <div class="service-photo-col">
+        <img class="service-photo"
+             src="images/body_mapping/lying_down_drawing.JPG"
+             alt="A body map drawing created during a somatic body mapping session" />
+      </div>
+      <div class="service-text-col">
+        <span class="service-label" data-en="Body Mapping" data-es="Mapeo Corporal">Body Mapping</span>
+        <h3 class="service-title"
+            data-en="Somatic Body Mapping"
+            data-es="Mapeo Corporal Somático">Somatic Body Mapping</h3>
+        <p class="service-short lang-en">A therapeutic, body-led creative process to explore and visually communicate the stories you carry in your body.</p>
+        <p class="service-short lang-es">Un proceso creativo y terapéutico que te invita a explorar y comunicar visualmente las historias que vives en tu cuerpo.</p>
+        <button class="service-expand-btn" aria-expanded="false">
+          <span class="lang-en">Read more</span><span class="lang-es">Leer más</span>
+          <span class="service-expand-arrow">↓</span>
+        </button>
+      </div>
+    </div>
+    <div class="service-drawer" aria-hidden="true">
+      <div class="service-drawer-inner">
+        <div class="lang-en">
+          <p>Somatic Body Mapping (SBM) invites you to paint a life-size representation of your body onto canvas, guided by somatic awareness. The result is a deeply personal artwork that gives form to inner experience — sensations, emotions, memories and meaning.</p>
+          <p>Available individually and in groups, SBM is especially supportive during times of transition — loss and grief, illness, menopause, birth, arriving in a new country. No artistic experience is needed.</p>
+          <p>A free 30-minute consultation is available to explore if this is the right approach for you.</p>
+        </div>
+        <div class="lang-es">
+          <p>El Mapeo Corporal Somático te invita a pintar una representación a tamaño natural de tu cuerpo en un lienzo, guiada/o por la conciencia somática. El resultado es una obra de arte profundamente personal que da forma a la experiencia interior: sensaciones, emociones, recuerdos y significado.</p>
+          <p>Disponible de forma individual y grupal, especialmente beneficioso en momentos de transición: pérdida y duelo, enfermedad, menopausia, maternidad, llegada a un nuevo país. No se necesita experiencia artística.</p>
+          <p>Consulta inicial gratuita de 30 minutos disponible.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Service 3: Supervision — photo LEFT -->
+  <article class="service-section" data-images='["images/body_mapping/hand_reaching.jpg","images/abstract/abstract_hand.JPG","images/abstract/abstract_fibres.JPG","images/abstract/feathers.JPG"]' aria-label="Supervision">
+    <div class="service-header">
+      <div class="service-photo-col">
+        <img class="service-photo"
+             src="images/body_mapping/hand_reaching.jpg"
+             alt="A hand reaching upward, suggesting support and therapeutic connection" />
+      </div>
+      <div class="service-text-col">
+        <span class="service-label" data-en="Supervision" data-es="Supervisión">Supervision</span>
+        <h3 class="service-title"
+            data-en="Clinical Supervision"
+            data-es="Supervisión Clínica">Clinical Supervision</h3>
+        <p class="service-short lang-en">Individual and group supervision for Dance Movement Psychotherapists, creative psychotherapists, and professionals in the care sector.</p>
+        <p class="service-short lang-es">Supervisión individual y grupal para DMT, psicoterapeutas creativos y profesionales del sector sociosanitario.</p>
+        <button class="service-expand-btn" aria-expanded="false">
+          <span class="lang-en">Read more</span><span class="lang-es">Leer más</span>
+          <span class="service-expand-arrow">↓</span>
+        </button>
+      </div>
+    </div>
+    <div class="service-drawer" aria-hidden="true">
+      <div class="service-drawer-inner">
+        <div class="lang-en">
+          <p>Supervision is offered from a creative and embodied perspective, drawing on role play, imagery, movement exploration, group sculpts and body shaping. The aim is to support reflective, ethical and creative practice.</p>
+          <p>Suitable for Dance Movement Psychotherapists, creative arts therapists, psychotherapists, social workers, counsellors and other care professionals.</p>
+          <p><strong>Fees:</strong> €60 per individual session (60 min). Group supervision fees vary — please get in touch.</p>
+        </div>
+        <div class="lang-es">
+          <p>La supervisión se ofrece desde una perspectiva creativa y encarnada: juego de roles, imágenes, exploración del movimiento, esculturas grupales y modelado corporal. El objetivo es apoyar una práctica reflexiva, ética y creativa.</p>
+          <p>Adecuada para DMT, terapeutas de artes creativas, psicoterapeutas, trabajadores sociales, orientadores y otros profesionales del sector sociosanitario.</p>
+          <p><strong>Honorarios:</strong> €60 por sesión individual (60 min). Grupos: consultar.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Service 4: Training — photo RIGHT -->
+  <article class="service-section service-section--flip" data-images='["images/training_and_workshops/two_dancers.JPG","images/training_and_workshops/blurred_feet.JPG","images/training_and_workshops/candles.JPG","images/training_and_workshops/colourful_string.JPG","images/training_and_workshops/feet_lying_down.JPG","images/training_and_workshops/green_inma_talking.JPG"]' aria-label="Training and Workshops">
+    <div class="service-header">
+      <div class="service-photo-col">
+        <img class="service-photo"
+             src="images/training_and_workshops/two_dancers.JPG"
+             alt="Two people dancing expressively together in a workshop setting" />
+      </div>
+      <div class="service-text-col">
+        <span class="service-label" data-en="Training" data-es="Formación">Training</span>
+        <h3 class="service-title"
+            data-en="Training &amp; Workshops"
+            data-es="Formación y Talleres">Training &amp; Workshops</h3>
+        <p class="service-short lang-en">Training for individuals and organisations including an Introduction to Dance Movement Psychotherapy course.</p>
+        <p class="service-short lang-es">Formación para personas y organizaciones, incluyendo un curso de Introducción a la Danza Movimiento Terapia.</p>
+        <button class="service-expand-btn" aria-expanded="false">
+          <span class="lang-en">Read more</span><span class="lang-es">Leer más</span>
+          <span class="service-expand-arrow">↓</span>
+        </button>
+      </div>
+    </div>
+    <div class="service-drawer" aria-hidden="true">
+      <div class="service-drawer-inner">
+        <div class="lang-en">
+          <p>The Introduction to Dance Movement Psychotherapy course is designed for psychotherapists, creative psychotherapists, social workers, coaches and helping professionals. It equips participants with body-based and creative DMP tools to enrich their existing practice.</p>
+          <p>Training is also available for organisations wishing to integrate movement-based approaches into their work with staff or clients.</p>
+          <p>Book a free 30-minute consultation to find out more about current course dates and content.</p>
+        </div>
+        <div class="lang-es">
+          <p>El curso de Introducción a la Danza Movimiento Terapia está diseñado para psicoterapeutas, terapeutas de artes creativas, trabajadores sociales, coaches y otros profesionales de ayuda. Proporciona herramientas corporales y creativas de la DMT para enriquecer la práctica existente.</p>
+          <p>También se ofrece formación para organizaciones que deseen integrar enfoques basados en el movimiento en su trabajo con el personal o los clientes.</p>
+          <p>Reserva una consulta gratuita de 30 minutos para obtener más información sobre las fechas y el contenido del curso.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+</section>
+
+<div class="section-divider" aria-hidden="true">
+  <img class="divider-img" src="images/abstract/abstract_hand.JPG" alt="" />
+</div>
+
+<!-- ===========================
+     ABOUT
+     =========================== -->
+<section id="about" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="about-inner">
+
+      <div class="about-portrait-col">
+        <img class="about-portrait"
+             src="images/training_and_workshops/inma_teaching.JPG"
+             alt="Inma Piqueras Ramos teaching a movement session"
+             width="420"
+             height="520" />
+      </div>
+
+      <div class="about-right">
+        <h2 id="about-heading"
+            data-en="About Inma"
+            data-es="Sobre Inma">About Inma</h2>
+
+        <p class="about-pullquote lang-en">Our body holds traces that speak louder than words.</p>
+        <p class="about-pullquote lang-es">Nuestro cuerpo tiene marcas que hablan más que las palabras.</p>
+
+        <div class="about-bio lang-en">
+          <p>Hello, I'm Inma Piqueras-Ramos — a Movement Psychotherapist, supervisor and trainer based in Valencia, Spain, and working online worldwide.</p>
+          <p>Since childhood I have been drawn to movement. As an adult this became a need: to stay in touch with my body and to express through it. I completed my Dance Movement Psychotherapy training at Canterbury Christchurch University – Dance Voice UK in 2013, following a degree in Social Work from the University of Valencia (1997) and over 20 years of experience in mental health.</p>
+          <p>I currently specialise in supporting women and non-binary people during times of transition and trauma recovery.</p>
+          <p>I am a member of ADMPUK and ADMTE, where I serve on the board of directors as secretary since November 2023.</p>
+        </div>
+
+        <div class="about-bio lang-es">
+          <p>Hola, soy Inma Piqueras-Ramos — Danza Movimiento Terapeuta, supervisora y formadora, con sede en Valencia y práctica online en todo el mundo.</p>
+          <p>Desde siempre me ha atraído el movimiento. De adulta, esto se convirtió en una necesidad: mantener el contacto con mi cuerpo y expresarme a través de él. Completé mi formación en Danza Movimiento Terapia en Canterbury Christchurch University – Dance Voice UK en 2013, tras graduarme en Trabajo Social por la Universidad de Valencia (1997) y más de 20 años de experiencia en salud mental.</p>
+          <p>Me especializo en apoyar a mujeres y personas no binarias en momentos de transición y recuperación del trauma.</p>
+          <p>Soy miembro del ADMPUK y de la ADMTE, donde ejerzo como secretaria del consejo directivo desde noviembre de 2023.</p>
+        </div>
+
+        <div class="about-memberships" aria-label="Professional memberships">
+          <span class="badge">ADMPUK</span>
+          <span class="badge">ADMTE</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===========================
+     TESTIMONIALS
+     =========================== -->
+<section id="testimonials" aria-labelledby="testimonials-heading">
+  <div class="container">
+    <h2 id="testimonials-heading" class="section-heading"
+        data-en="What Clients Say"
+        data-es="Lo Que Dicen los Clientes">What Clients Say</h2>
+  </div>
+
+  <!-- English carousel -->
+  <div class="testimonials-carousel lang-en" aria-label="Client testimonials">
+    <div class="testimonials-track">
+
+      <article class="testimonial-card">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <p class="testimonial-text">Therapy with Inma consisted of allowing the body to express itself freely. I discovered something I had not suspected: that our body holds traces that speak louder than words.</p>
+        <p class="testimonial-name">Laura L.</p>
+      </article>
+
+      <article class="testimonial-card">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <p class="testimonial-text">I had a session with Inma that brought me the clarity I had been looking for. She creates a safe space to connect to your body. I highly recommend working with Inma — so caring and professional.</p>
+        <p class="testimonial-name">Roxana G.</p>
+      </article>
+
+      <article class="testimonial-card">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <p class="testimonial-text">I had the most beautiful session with Inma. She listens deeply and with tiny adjustments has helped me bring on deep shifts. She is an absolute treasure!</p>
+        <p class="testimonial-name">Gabi G.</p>
+      </article>
+
+      <article class="testimonial-card">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <p class="testimonial-text">Inma will walk you through an experience that will leave you with nuggets of gold to carry through the hard times. A beautiful understanding of what I need and how to achieve it by being aware of my body.</p>
+        <p class="testimonial-name">Tammy M.</p>
+      </article>
+
+      <article class="testimonial-card">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <p class="testimonial-text">Working with Inma has helped me so much to identify my burnout cycle before I get sucked down it. This year my general energy and business energy is vastly different! Highly recommend.</p>
+        <p class="testimonial-name">Kate D.</p>
+      </article>
+
+      <article class="testimonial-card">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <p class="testimonial-text">My sessions with Inma have been an eye opener. My body was carrying deep emotions I hadn't addressed. Inma guided me with such sensitivity and care — I feel so much more clarity after working with her.</p>
+        <p class="testimonial-name">Pinta K.</p>
+      </article>
+
+      <article class="testimonial-card">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <p class="testimonial-text">While working with Inma I've learned how disconnected from my body I was. After our work I am eating better, making time for rest, and exercising regularly. I'm sleeping better and I'm happier.</p>
+        <p class="testimonial-name">Paula T.</p>
+      </article>
+
+      <!-- Duplicates for seamless infinite loop -->
+      <article class="testimonial-card" aria-hidden="true">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <p class="testimonial-text">Therapy with Inma consisted of allowing the body to express itself freely. I discovered something I had not suspected: that our body holds traces that speak louder than words.</p>
+        <p class="testimonial-name">Laura L.</p>
+      </article>
+
+      <article class="testimonial-card" aria-hidden="true">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <p class="testimonial-text">I had a session with Inma that brought me the clarity I had been looking for. She creates a safe space to connect to your body. I highly recommend working with Inma — so caring and professional.</p>
+        <p class="testimonial-name">Roxana G.</p>
+      </article>
+
+      <article class="testimonial-card" aria-hidden="true">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <p class="testimonial-text">I had the most beautiful session with Inma. She listens deeply and with tiny adjustments has helped me bring on deep shifts. She is an absolute treasure!</p>
+        <p class="testimonial-name">Gabi G.</p>
+      </article>
+
+      <article class="testimonial-card" aria-hidden="true">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <p class="testimonial-text">Inma will walk you through an experience that will leave you with nuggets of gold to carry through the hard times. A beautiful understanding of what I need and how to achieve it by being aware of my body.</p>
+        <p class="testimonial-name">Tammy M.</p>
+      </article>
+
+      <article class="testimonial-card" aria-hidden="true">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <p class="testimonial-text">Working with Inma has helped me so much to identify my burnout cycle before I get sucked down it. This year my general energy and business energy is vastly different! Highly recommend.</p>
+        <p class="testimonial-name">Kate D.</p>
+      </article>
+
+      <article class="testimonial-card" aria-hidden="true">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <p class="testimonial-text">My sessions with Inma have been an eye opener. My body was carrying deep emotions I hadn't addressed. Inma guided me with such sensitivity and care — I feel so much more clarity after working with her.</p>
+        <p class="testimonial-name">Pinta K.</p>
+      </article>
+
+      <article class="testimonial-card" aria-hidden="true">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <p class="testimonial-text">While working with Inma I've learned how disconnected from my body I was. After our work I am eating better, making time for rest, and exercising regularly. I'm sleeping better and I'm happier.</p>
+        <p class="testimonial-name">Paula T.</p>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- Spanish carousel -->
+  <div class="testimonials-carousel lang-es" aria-label="Testimonios de clientes">
+    <div class="testimonials-track">
+
+      <article class="testimonial-card">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <p class="testimonial-text">La terapia con Inma consistía en dejar volar al cuerpo. Ahí comprendí algo que ni sospechaba: que nuestro cuerpo tiene marcas que hablan más que las palabras.</p>
+        <p class="testimonial-name">Laura L.</p>
+      </article>
+
+      <article class="testimonial-card">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <p class="testimonial-text">Ayer tuve una sesión preciosa con Inma y no puedo recomendar su trabajo lo suficiente. Escucha con mucha profundidad y con pequeños ajustes me ha ayudado a lograr cambios profundos. ¡Es un auténtico tesoro!</p>
+        <p class="testimonial-name">Gabi G.</p>
+      </article>
+
+      <article class="testimonial-card">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <p class="testimonial-text">Trabajar con Inma me ha ayudado muchísimo a identificar mi ciclo de burnout antes de caer en él. Este año mi energía personal y profesional es completamente diferente. La recomiendo profundamente.</p>
+        <p class="testimonial-name">Kate D.</p>
+      </article>
+
+      <article class="testimonial-card">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <p class="testimonial-text">Llegó un momento en que, con la psicoterapia tradicional, sentía que no avanzaba. Sin embargo, al trabajar con Inma no solo desde la palabra sino también desde el cuerpo, experimenté un cambio profundo.</p>
+        <p class="testimonial-name">Sara B.</p>
+      </article>
+
+      <article class="testimonial-card">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <p class="testimonial-text">Valoro muy positivamente mi proceso con Inma a lo largo de más de 18 sesiones. Me he sentido acompañado en todo momento y con la confianza de poder expresar mis emociones, incluso en los momentos más difíciles.</p>
+        <p class="testimonial-name">Antonio G.</p>
+      </article>
+
+      <article class="testimonial-card">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <p class="testimonial-text">Mis sesiones con Inma han sido una auténtica revelación. Mi cuerpo estaba cargando con emociones profundas que no había atendido. Inma me guió con sensibilidad y cuidado. ¡Un trabajo increíble!</p>
+        <p class="testimonial-name">Pinta K.</p>
+      </article>
+
+      <article class="testimonial-card">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <p class="testimonial-text">Durante mi trabajo con Inma, me di cuenta de lo desconectada que estaba de mi cuerpo. Después de nuestro trabajo, estoy comiendo mejor, descansando y haciendo ejercicio. Duermo mejor y me siento más feliz.</p>
+        <p class="testimonial-name">Paula T.</p>
+      </article>
+
+      <!-- Duplicates for seamless infinite loop -->
+      <article class="testimonial-card" aria-hidden="true">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <p class="testimonial-text">La terapia con Inma consistía en dejar volar al cuerpo. Ahí comprendí algo que ni sospechaba: que nuestro cuerpo tiene marcas que hablan más que las palabras.</p>
+        <p class="testimonial-name">Laura L.</p>
+      </article>
+
+      <article class="testimonial-card" aria-hidden="true">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <p class="testimonial-text">Ayer tuve una sesión preciosa con Inma y no puedo recomendar su trabajo lo suficiente. Escucha con mucha profundidad y con pequeños ajustes me ha ayudado a lograr cambios profundos. ¡Es un auténtico tesoro!</p>
+        <p class="testimonial-name">Gabi G.</p>
+      </article>
+
+      <article class="testimonial-card" aria-hidden="true">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <p class="testimonial-text">Trabajar con Inma me ha ayudado muchísimo a identificar mi ciclo de burnout antes de caer en él. Este año mi energía personal y profesional es completamente diferente. La recomiendo profundamente.</p>
+        <p class="testimonial-name">Kate D.</p>
+      </article>
+
+      <article class="testimonial-card" aria-hidden="true">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <p class="testimonial-text">Llegó un momento en que, con la psicoterapia tradicional, sentía que no avanzaba. Sin embargo, al trabajar con Inma no solo desde la palabra sino también desde el cuerpo, experimenté un cambio profundo.</p>
+        <p class="testimonial-name">Sara B.</p>
+      </article>
+
+      <article class="testimonial-card" aria-hidden="true">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <p class="testimonial-text">Valoro muy positivamente mi proceso con Inma a lo largo de más de 18 sesiones. Me he sentido acompañado en todo momento y con la confianza de poder expresar mis emociones, incluso en los momentos más difíciles.</p>
+        <p class="testimonial-name">Antonio G.</p>
+      </article>
+
+      <article class="testimonial-card" aria-hidden="true">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <p class="testimonial-text">Mis sesiones con Inma han sido una auténtica revelación. Mi cuerpo estaba cargando con emociones profundas que no había atendido. Inma me guió con sensibilidad y cuidado. ¡Un trabajo increíble!</p>
+        <p class="testimonial-name">Pinta K.</p>
+      </article>
+
+      <article class="testimonial-card" aria-hidden="true">
+        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+        <p class="testimonial-text">Durante mi trabajo con Inma, me di cuenta de lo desconectada que estaba de mi cuerpo. Después de nuestro trabajo, estoy comiendo mejor, descansando y haciendo ejercicio. Duermo mejor y me siento más feliz.</p>
+        <p class="testimonial-name">Paula T.</p>
+      </article>
+
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ===========================
+     EVENTS
+     =========================== -->
+<section id="events" aria-labelledby="events-heading">
+  <div class="container">
+
+    <h2 id="events-heading" class="section-heading"
+        data-en="Upcoming Events"
+        data-es="Próximos Eventos">Upcoming Events</h2>
+
+    <div id="events-list" class="events-list" aria-live="polite" aria-label="Upcoming events"></div>
+
+    <p id="events-empty"
+       class="events-empty"
+       style="display:none;"
+       data-en="No upcoming events. Check back soon."
+       data-es="No hay eventos próximos. ¡Vuelve pronto!">No upcoming events. Check back soon.</p>
+
+  </div>
+</section>
+
+<!-- ===========================
+     CONTACT
+     =========================== -->
+<section id="contact" aria-labelledby="contact-heading">
+  <div class="container">
+
+    <h2 id="contact-heading" class="section-heading"
+        data-en="Get in Touch"
+        data-es="Ponte en Contacto">Get in Touch</h2>
+
+    <div class="contact-inner">
+
+      <!-- Form -->
+      <div class="contact-form-wrap">
+        <form action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST"
+              aria-label="Contact form"
+              novalidate>
+
+          <label class="contact-form-label" for="contact-name"
+                 data-en="Your name"
+                 data-es="Tu nombre">Your name</label>
+          <input class="contact-input"
+                 type="text"
+                 id="contact-name"
+                 name="name"
+                 required
+                 autocomplete="name"
+                 aria-required="true" />
+
+          <label class="contact-form-label" for="contact-email"
+                 data-en="Email address"
+                 data-es="Dirección de email">Email address</label>
+          <input class="contact-input"
+                 type="email"
+                 id="contact-email"
+                 name="email"
+                 required
+                 autocomplete="email"
+                 aria-required="true" />
+
+          <label class="contact-form-label" for="contact-message"
+                 data-en="Message"
+                 data-es="Mensaje">Message</label>
+          <textarea class="contact-textarea"
+                    id="contact-message"
+                    name="message"
+                    required
+                    aria-required="true"
+                    rows="5"></textarea>
+
+          <button type="submit"
+                  class="contact-submit"
+                  data-en="Send message"
+                  data-es="Enviar mensaje">Send message</button>
+
+        </form>
+      </div>
+
+      <!-- Info -->
+      <div class="contact-info">
+        <h3 data-en="Let's connect"
+            data-es="Conectemos">Let's connect</h3>
+
+        <p class="lang-en">Use the form or find me on social media. I'm happy to answer any questions and offer a free 30-minute initial consultation.</p>
+        <p class="lang-es">Usa el formulario o encuéntrame en redes sociales. Estoy encantada de responder tus preguntas y ofrecer una consulta inicial gratuita de 30 minutos.</p>
+
+        <div class="contact-location" aria-label="Location">
+          <!-- Location pin icon -->
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span data-en="Valencia, Spain (also available online)"
+                data-es="Valencia, España (también disponible en línea)">Valencia, Spain (also available online)</span>
+        </div>
+
+        <div class="contact-socials">
+
+          <a href="https://www.linkedin.com/in/inma-piqueras-ramos-81144217/"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="social-link"
+             aria-label="Inma Piqueras Ramos on LinkedIn">
+            <!-- LinkedIn SVG -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            LinkedIn
+          </a>
+
+          <a href="https://www.instagram.com/inma.piqueras.ramos/"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="social-link"
+             aria-label="Inma Piqueras Ramos on Instagram">
+            <!-- Instagram SVG -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+            Instagram
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===========================
+     FOOTER
+     =========================== -->
+<footer id="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <p class="footer-name">Inma Piqueras Ramos</p>
+        <p class="footer-tagline">Move Into Being</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#hero"
+           data-en="Home"
+           data-es="Inicio">Home</a>
+        <a href="#services"
+           data-en="Services"
+           data-es="Servicios">Services</a>
+        <a href="#about"
+           data-en="About"
+           data-es="Sobre mí">About</a>
+        <a href="#testimonials"
+           data-en="Testimonials"
+           data-es="Testimonios">Testimonials</a>
+        <a href="#contact"
+           data-en="Contact"
+           data-es="Contacto">Contact</a>
+      </nav>
+
+    </div>
+
+    <hr class="footer-divider" />
+
+    <p class="footer-copy">
+      &copy; <span id="year"></span> Inma Piqueras Ramos.
+      <span data-en="All rights reserved."
+            data-es="Todos los derechos reservados.">All rights reserved.</span>
+    </p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
