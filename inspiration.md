@@ -76,10 +76,10 @@ Images are organised into subfolders inside `images/`:
 - Language toggle: EN/ES pill in nav. Saves to localStorage. Detects browser language on first visit. Text uses `data-en`/`data-es` attributes (JS-swapped) for inline strings; `.lang-en`/`.lang-es` CSS classes for block elements.
 - Active nav: IntersectionObserver highlights current section link with sage underline
 - Location shown: Valencia, Spain (also available online). No phone, no public email.
-- Contact form: Formspree — action URL in index.html still contains `YOUR_FORM_ID` placeholder, needs replacing.
+- Contact form: Formspree — `https://formspree.io/f/xojrrgbw`
 
 ## still to do / placeholders
-- **Formspree ID**: replace `YOUR_FORM_ID` in the contact form action attribute
+- ~~**Formspree ID**~~ — done (`xojrrgbw`)
 - **Newsletter link**: search for `YOUR_NEWSLETTER_LINK` in index.html and replace with Mailchimp/ConvertKit URL
 - **Testimonial videos**: inspiration.md mentioned video cards but these were not built
 - **Favicon**: currently an emoji leaf SVG inline — replace with a proper favicon file
