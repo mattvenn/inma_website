@@ -1,8 +1,14 @@
 [
   {
     "key": "dmp",
-    "label": {"en": "Psychotherapy", "es": "Terapia"},
-    "title": {"en": "Dance Movement Psychotherapy", "es": "Danza Movimiento Terapia"},
+    "label": {
+      "en": "Psychotherapy",
+      "es": "Terapia"
+    },
+    "title": {
+      "en": "Dance Movement Psychotherapy",
+      "es": "Danza Movimiento Terapia"
+    },
     "short": {
       "en": "Individual and group Dance Movement Psychotherapy sessions for adults. Face-to-face or online. First 30-minute consultation is free.",
       "es": "Sesiones individuales y grupales de Danza Movimiento Terapia para adultos. Presencial o en línea. Primera consulta de 30 minutos gratuita."
@@ -14,8 +20,14 @@
   },
   {
     "key": "sbm",
-    "label": {"en": "Body Mapping", "es": "Mapeo Corporal"},
-    "title": {"en": "Somatic Body Mapping", "es": "Mapeo Corporal Somático"},
+    "label": {
+      "en": "Body Mapping",
+      "es": "Mapeo Corporal"
+    },
+    "title": {
+      "en": "Somatic Body Mapping",
+      "es": "Mapeo Corporal Somático"
+    },
     "short": {
       "en": "A therapeutic, body-led creative process to explore and visually communicate the stories you carry in your body.",
       "es": "Un proceso creativo y terapéutico que te invita a explorar y comunicar visualmente las historias que vives en tu cuerpo."
@@ -27,8 +39,14 @@
   },
   {
     "key": "supervision",
-    "label": {"en": "Supervision", "es": "Supervisión"},
-    "title": {"en": "Clinical Supervision", "es": "Supervisión Clínica"},
+    "label": {
+      "en": "Supervision",
+      "es": "Supervisión"
+    },
+    "title": {
+      "en": "Clinical Supervision",
+      "es": "Supervisión Clínica"
+    },
     "short": {
       "en": "Individual and group supervision for Dance Movement Psychotherapists, creative psychotherapists, and professionals in the care sector.",
       "es": "Supervisión individual y grupal para DMT, psicoterapeutas creativos y profesionales del sector sociosanitario."
@@ -40,8 +58,14 @@
   },
   {
     "key": "training",
-    "label": {"en": "Training", "es": "Formación"},
-    "title": {"en": "Training &amp; Workshops", "es": "Formación y Talleres"},
+    "label": {
+      "en": "Training",
+      "es": "Formación"
+    },
+    "title": {
+      "en": "Training & Workshops",
+      "es": "Formación y Talleres"
+    },
     "short": {
       "en": "Training for individuals and organisations including an Introduction to Dance Movement Psychotherapy course.",
       "es": "Formación para personas y organizaciones, incluyendo un curso de Introducción a la Danza Movimiento Terapia."
