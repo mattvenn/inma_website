@@ -1,0 +1,50 @@
+{
+  "hero_eyebrow": {
+    "en": "Movement Psychotherapy",
+    "es": "Psicoterapia por el Movimiento"
+  },
+  "hero_subtitle": {
+    "en": "Dance Movement Psychotherapist &middot; Supervisor &middot; Trainer",
+    "es": "Danza Movimiento Terapeuta &middot; Supervisora &middot; Formadora"
+  },
+  "hero_intro": {
+    "en": "A place from which to find, heal and transform yourself.",
+    "es": "Un espacio desde el cual encontrar, sanar y transformarte."
+  },
+  "hero_cta_primary": {
+    "en": "Book a free consultation",
+    "es": "Reserva una consulta gratuita"
+  },
+  "hero_cta_secondary": {
+    "en": "Learn more",
+    "es": "Saber más"
+  },
+  "services_heading": {
+    "en": "What I Offer",
+    "es": "Lo Que Ofrezco"
+  },
+  "about_heading": {
+    "en": "About Inma",
+    "es": "Sobre Inma"
+  },
+  "about_pullquote": {
+    "en": "Our body holds traces that speak louder than words.",
+    "es": "Nuestro cuerpo tiene marcas que hablan más que las palabras."
+  },
+  "about_bio": {
+    "en": "<p>Hello, I'm Inma Piqueras-Ramos — a Movement Psychotherapist, supervisor and trainer based in Valencia, Spain, and working online worldwide.</p>\n<p>Since childhood I have been drawn to movement. As an adult this became a need: to stay in touch with my body and to express through it. I completed my Dance Movement Psychotherapy training at Canterbury Christchurch University – Dance Voice UK in 2013, following a degree in Social Work from the University of Valencia (1997) and over 20 years of experience in mental health.</p>\n<p>I currently specialise in supporting women and non-binary people during times of transition and trauma recovery.</p>\n<p>I am a member of ADMPUK and ADMTE, where I serve on the board of directors as secretary since November 2023.</p>",
+    "es": "<p>Hola, soy Inma Piqueras-Ramos — Danza Movimiento Terapeuta, supervisora y formadora, con sede en Valencia y práctica online en todo el mundo.</p>\n<p>Desde siempre me ha atraído el movimiento. De adulta, esto se convirtió en una necesidad: mantener el contacto con mi cuerpo y expresarme a través de él. Completé mi formación en Danza Movimiento Terapia en Canterbury Christchurch University – Dance Voice UK en 2013, tras graduarme en Trabajo Social por la Universidad de Valencia (1997) y más de 20 años de experiencia en salud mental.</p>\n<p>Me especializo en apoyar a mujeres y personas no binarias en momentos de transición y recuperación del trauma.</p>\n<p>Soy miembro del ADMPUK y de la ADMTE, donde ejerzo como secretaria del consejo directivo desde noviembre de 2023.</p>"
+  },
+  "testimonials_heading": {
+    "en": "What Clients Say",
+    "es": "Lo Que Dicen los Clientes"
+  },
+  "events_heading": {
+    "en": "Upcoming Events",
+    "es": "Próximos Eventos"
+  },
+  "contact_heading": {
+    "en": "Get in Touch",
+    "es": "Ponte en Contacto"
+  }
+}

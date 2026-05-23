@@ -101,6 +101,7 @@
     <div class="hero-content">
 
       <span class="hero-eyebrow"
+            data-content-key="hero_eyebrow"
             data-en="Movement Psychotherapy"
             data-es="Psicoterapia por el Movimiento">Movement Psychotherapy</span>
 
@@ -111,20 +112,24 @@
       </h1>
 
       <p class="hero-subtitle"
+         data-content-key="hero_subtitle"
          data-en="Dance Movement Psychotherapist &middot; Supervisor &middot; Trainer"
          data-es="Danza Movimiento Terapeuta &middot; Supervisora &middot; Formadora">Dance Movement Psychotherapist &middot; Supervisor &middot; Trainer</p>
 
       <p class="hero-intro"
+         data-content-key="hero_intro"
          data-en="A place from which to find, heal and transform yourself."
          data-es="Un espacio desde el cual encontrar, sanar y transformarte.">A place from which to find, heal and transform yourself.</p>
 
       <div class="hero-ctas">
         <a href="#contact"
            class="btn btn-primary"
+           data-content-key="hero_cta_primary"
            data-en="Book a free consultation"
            data-es="Reserva una consulta gratuita">Book a free consultation</a>
         <a href="#services"
            class="btn btn-outline-light"
+           data-content-key="hero_cta_secondary"
            data-en="Learn more"
            data-es="Saber más">Learn more</a>
       </div>
@@ -139,12 +144,13 @@
 <section id="services" aria-labelledby="services-heading">
   <div class="container">
     <h2 id="services-heading" class="section-heading"
+        data-content-key="services_heading"
         data-en="What I Offer"
         data-es="Lo Que Ofrezco">What I Offer</h2>
   </div>
 
   <!-- Service 1: DMP — photo LEFT -->
-  <article class="service-section" data-images='["images/dmp/floating_scarf.webp","images/dmp/fun_scarfs.webp"]' aria-label="Dance Movement Psychotherapy">
+  <article class="service-section" data-service-key="dmp" data-images='["images/dmp/floating_scarf.webp","images/dmp/fun_scarfs.webp"]' aria-label="Dance Movement Psychotherapy">
     <div class="service-header">
       <div class="service-photo-col">
         <img class="service-photo"
@@ -181,7 +187,7 @@
   </article>
 
   <!-- Service 2: Body Mapping — photo RIGHT -->
-  <article class="service-section service-section--flip" data-images='["images/body_mapping/lying_down_drawing.webp","images/body_mapping/bluebody.webp","images/body_mapping/hand_reaching.webp","images/body_mapping/hand_string.webp","images/body_mapping/lying_down.webp"]' aria-label="Somatic Body Mapping">
+  <article class="service-section service-section--flip" data-service-key="sbm" data-images='["images/body_mapping/lying_down_drawing.webp","images/body_mapping/bluebody.webp","images/body_mapping/hand_reaching.webp","images/body_mapping/hand_string.webp","images/body_mapping/lying_down.webp"]' aria-label="Somatic Body Mapping">
     <div class="service-header">
       <div class="service-photo-col">
         <img class="service-photo"
@@ -218,7 +224,7 @@
   </article>
 
   <!-- Service 3: Supervision — photo LEFT -->
-  <article class="service-section" data-images='["images/body_mapping/hand_reaching.webp","images/abstract/abstract_hand.webp","images/abstract/abstract_fibres.webp","images/abstract/feathers.webp"]' aria-label="Supervision">
+  <article class="service-section" data-service-key="supervision" data-images='["images/body_mapping/hand_reaching.webp","images/abstract/abstract_hand.webp","images/abstract/abstract_fibres.webp","images/abstract/feathers.webp"]' aria-label="Supervision">
     <div class="service-header">
       <div class="service-photo-col">
         <img class="service-photo"
@@ -255,7 +261,7 @@
   </article>
 
   <!-- Service 4: Training — photo RIGHT -->
-  <article class="service-section service-section--flip" data-images='["images/training_and_workshops/two_dancers.webp","images/training_and_workshops/blurred_feet.webp","images/training_and_workshops/candles.webp","images/training_and_workshops/colourful_string.webp","images/training_and_workshops/feet_lying_down.webp","images/training_and_workshops/green_inma_talking.webp"]' aria-label="Training and Workshops">
+  <article class="service-section service-section--flip" data-service-key="training" data-images='["images/training_and_workshops/two_dancers.webp","images/training_and_workshops/blurred_feet.webp","images/training_and_workshops/candles.webp","images/training_and_workshops/colourful_string.webp","images/training_and_workshops/feet_lying_down.webp","images/training_and_workshops/green_inma_talking.webp"]' aria-label="Training and Workshops">
     <div class="service-header">
       <div class="service-photo-col">
         <img class="service-photo"
@@ -314,20 +320,21 @@
 
       <div class="about-right">
         <h2 id="about-heading"
+            data-content-key="about_heading"
             data-en="About Inma"
             data-es="Sobre Inma">About Inma</h2>
 
-        <p class="about-pullquote lang-en">Our body holds traces that speak louder than words.</p>
-        <p class="about-pullquote lang-es">Nuestro cuerpo tiene marcas que hablan más que las palabras.</p>
+        <p class="about-pullquote lang-en" data-content-key="about_pullquote" data-content-lang="en">Our body holds traces that speak louder than words.</p>
+        <p class="about-pullquote lang-es" data-content-key="about_pullquote" data-content-lang="es">Nuestro cuerpo tiene marcas que hablan más que las palabras.</p>
 
-        <div class="about-bio lang-en">
+        <div class="about-bio lang-en" data-content-key="about_bio" data-content-lang="en">
           <p>Hello, I'm Inma Piqueras-Ramos — a Movement Psychotherapist, supervisor and trainer based in Valencia, Spain, and working online worldwide.</p>
           <p>Since childhood I have been drawn to movement. As an adult this became a need: to stay in touch with my body and to express through it. I completed my Dance Movement Psychotherapy training at Canterbury Christchurch University – Dance Voice UK in 2013, following a degree in Social Work from the University of Valencia (1997) and over 20 years of experience in mental health.</p>
           <p>I currently specialise in supporting women and non-binary people during times of transition and trauma recovery.</p>
           <p>I am a member of ADMPUK and ADMTE, where I serve on the board of directors as secretary since November 2023.</p>
         </div>
 
-        <div class="about-bio lang-es">
+        <div class="about-bio lang-es" data-content-key="about_bio" data-content-lang="es">
           <p>Hola, soy Inma Piqueras-Ramos — Danza Movimiento Terapeuta, supervisora y formadora, con sede en Valencia y práctica online en todo el mundo.</p>
           <p>Desde siempre me ha atraído el movimiento. De adulta, esto se convirtió en una necesidad: mantener el contacto con mi cuerpo y expresarme a través de él. Completé mi formación en Danza Movimiento Terapia en Canterbury Christchurch University – Dance Voice UK en 2013, tras graduarme en Trabajo Social por la Universidad de Valencia (1997) y más de 20 años de experiencia en salud mental.</p>
           <p>Me especializo en apoyar a mujeres y personas no binarias en momentos de transición y recuperación del trauma.</p>
@@ -350,192 +357,19 @@
 <section id="testimonials" aria-labelledby="testimonials-heading">
   <div class="container">
     <h2 id="testimonials-heading" class="section-heading"
+        data-content-key="testimonials_heading"
         data-en="What Clients Say"
         data-es="Lo Que Dicen los Clientes">What Clients Say</h2>
   </div>
 
-  <!-- English carousel -->
+  <!-- English carousel — populated by script.js from data/testimonials.json -->
   <div class="testimonials-carousel lang-en" aria-label="Client testimonials">
-    <div class="testimonials-track">
-
-      <article class="testimonial-card">
-        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
-        <p class="testimonial-text">Therapy with Inma consisted of allowing the body to express itself freely. I discovered something I had not suspected: that our body holds traces that speak louder than words.</p>
-        <p class="testimonial-name">Laura L.</p>
-      </article>
-
-      <article class="testimonial-card">
-        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
-        <p class="testimonial-text">I had a session with Inma that brought me the clarity I had been looking for. She creates a safe space to connect to your body. I highly recommend working with Inma — so caring and professional.</p>
-        <p class="testimonial-name">Roxana G.</p>
-      </article>
-
-      <article class="testimonial-card">
-        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
-        <p class="testimonial-text">I had the most beautiful session with Inma. She listens deeply and with tiny adjustments has helped me bring on deep shifts. She is an absolute treasure!</p>
-        <p class="testimonial-name">Gabi G.</p>
-      </article>
-
-      <article class="testimonial-card">
-        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
-        <p class="testimonial-text">Inma will walk you through an experience that will leave you with nuggets of gold to carry through the hard times. A beautiful understanding of what I need and how to achieve it by being aware of my body.</p>
-        <p class="testimonial-name">Tammy M.</p>
-      </article>
-
-      <article class="testimonial-card">
-        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
-        <p class="testimonial-text">Working with Inma has helped me so much to identify my burnout cycle before I get sucked down it. This year my general energy and business energy is vastly different! Highly recommend.</p>
-        <p class="testimonial-name">Kate D.</p>
-      </article>
-
-      <article class="testimonial-card">
-        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
-        <p class="testimonial-text">My sessions with Inma have been an eye opener. My body was carrying deep emotions I hadn't addressed. Inma guided me with such sensitivity and care — I feel so much more clarity after working with her.</p>
-        <p class="testimonial-name">Pinta K.</p>
-      </article>
-
-      <article class="testimonial-card">
-        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
-        <p class="testimonial-text">While working with Inma I've learned how disconnected from my body I was. After our work I am eating better, making time for rest, and exercising regularly. I'm sleeping better and I'm happier.</p>
-        <p class="testimonial-name">Paula T.</p>
-      </article>
-
-      <!-- Duplicates for seamless infinite loop -->
-      <article class="testimonial-card" aria-hidden="true">
-        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
-        <p class="testimonial-text">Therapy with Inma consisted of allowing the body to express itself freely. I discovered something I had not suspected: that our body holds traces that speak louder than words.</p>
-        <p class="testimonial-name">Laura L.</p>
-      </article>
-
-      <article class="testimonial-card" aria-hidden="true">
-        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
-        <p class="testimonial-text">I had a session with Inma that brought me the clarity I had been looking for. She creates a safe space to connect to your body. I highly recommend working with Inma — so caring and professional.</p>
-        <p class="testimonial-name">Roxana G.</p>
-      </article>
-
-      <article class="testimonial-card" aria-hidden="true">
-        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
-        <p class="testimonial-text">I had the most beautiful session with Inma. She listens deeply and with tiny adjustments has helped me bring on deep shifts. She is an absolute treasure!</p>
-        <p class="testimonial-name">Gabi G.</p>
-      </article>
-
-      <article class="testimonial-card" aria-hidden="true">
-        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
-        <p class="testimonial-text">Inma will walk you through an experience that will leave you with nuggets of gold to carry through the hard times. A beautiful understanding of what I need and how to achieve it by being aware of my body.</p>
-        <p class="testimonial-name">Tammy M.</p>
-      </article>
-
-      <article class="testimonial-card" aria-hidden="true">
-        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
-        <p class="testimonial-text">Working with Inma has helped me so much to identify my burnout cycle before I get sucked down it. This year my general energy and business energy is vastly different! Highly recommend.</p>
-        <p class="testimonial-name">Kate D.</p>
-      </article>
-
-      <article class="testimonial-card" aria-hidden="true">
-        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
-        <p class="testimonial-text">My sessions with Inma have been an eye opener. My body was carrying deep emotions I hadn't addressed. Inma guided me with such sensitivity and care — I feel so much more clarity after working with her.</p>
-        <p class="testimonial-name">Pinta K.</p>
-      </article>
-
-      <article class="testimonial-card" aria-hidden="true">
-        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
-        <p class="testimonial-text">While working with Inma I've learned how disconnected from my body I was. After our work I am eating better, making time for rest, and exercising regularly. I'm sleeping better and I'm happier.</p>
-        <p class="testimonial-name">Paula T.</p>
-      </article>
-
-    </div>
+    <div class="testimonials-track"></div>
   </div>
 
-  <!-- Spanish carousel -->
+  <!-- Spanish carousel — populated by script.js from data/testimonials.json -->
   <div class="testimonials-carousel lang-es" aria-label="Testimonios de clientes">
-    <div class="testimonials-track">
-
-      <article class="testimonial-card">
-        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
-        <p class="testimonial-text">La terapia con Inma consistía en dejar volar al cuerpo. Ahí comprendí algo que ni sospechaba: que nuestro cuerpo tiene marcas que hablan más que las palabras.</p>
-        <p class="testimonial-name">Laura L.</p>
-      </article>
-
-      <article class="testimonial-card">
-        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
-        <p class="testimonial-text">Ayer tuve una sesión preciosa con Inma y no puedo recomendar su trabajo lo suficiente. Escucha con mucha profundidad y con pequeños ajustes me ha ayudado a lograr cambios profundos. ¡Es un auténtico tesoro!</p>
-        <p class="testimonial-name">Gabi G.</p>
-      </article>
-
-      <article class="testimonial-card">
-        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
-        <p class="testimonial-text">Trabajar con Inma me ha ayudado muchísimo a identificar mi ciclo de burnout antes de caer en él. Este año mi energía personal y profesional es completamente diferente. La recomiendo profundamente.</p>
-        <p class="testimonial-name">Kate D.</p>
-      </article>
-
-      <article class="testimonial-card">
-        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
-        <p class="testimonial-text">Llegó un momento en que, con la psicoterapia tradicional, sentía que no avanzaba. Sin embargo, al trabajar con Inma no solo desde la palabra sino también desde el cuerpo, experimenté un cambio profundo.</p>
-        <p class="testimonial-name">Sara B.</p>
-      </article>
-
-      <article class="testimonial-card">
-        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
-        <p class="testimonial-text">Valoro muy positivamente mi proceso con Inma a lo largo de más de 18 sesiones. Me he sentido acompañado en todo momento y con la confianza de poder expresar mis emociones, incluso en los momentos más difíciles.</p>
-        <p class="testimonial-name">Antonio G.</p>
-      </article>
-
-      <article class="testimonial-card">
-        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
-        <p class="testimonial-text">Mis sesiones con Inma han sido una auténtica revelación. Mi cuerpo estaba cargando con emociones profundas que no había atendido. Inma me guió con sensibilidad y cuidado. ¡Un trabajo increíble!</p>
-        <p class="testimonial-name">Pinta K.</p>
-      </article>
-
-      <article class="testimonial-card">
-        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
-        <p class="testimonial-text">Durante mi trabajo con Inma, me di cuenta de lo desconectada que estaba de mi cuerpo. Después de nuestro trabajo, estoy comiendo mejor, descansando y haciendo ejercicio. Duermo mejor y me siento más feliz.</p>
-        <p class="testimonial-name">Paula T.</p>
-      </article>
-
-      <!-- Duplicates for seamless infinite loop -->
-      <article class="testimonial-card" aria-hidden="true">
-        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
-        <p class="testimonial-text">La terapia con Inma consistía en dejar volar al cuerpo. Ahí comprendí algo que ni sospechaba: que nuestro cuerpo tiene marcas que hablan más que las palabras.</p>
-        <p class="testimonial-name">Laura L.</p>
-      </article>
-
-      <article class="testimonial-card" aria-hidden="true">
-        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
-        <p class="testimonial-text">Ayer tuve una sesión preciosa con Inma y no puedo recomendar su trabajo lo suficiente. Escucha con mucha profundidad y con pequeños ajustes me ha ayudado a lograr cambios profundos. ¡Es un auténtico tesoro!</p>
-        <p class="testimonial-name">Gabi G.</p>
-      </article>
-
-      <article class="testimonial-card" aria-hidden="true">
-        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
-        <p class="testimonial-text">Trabajar con Inma me ha ayudado muchísimo a identificar mi ciclo de burnout antes de caer en él. Este año mi energía personal y profesional es completamente diferente. La recomiendo profundamente.</p>
-        <p class="testimonial-name">Kate D.</p>
-      </article>
-
-      <article class="testimonial-card" aria-hidden="true">
-        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
-        <p class="testimonial-text">Llegó un momento en que, con la psicoterapia tradicional, sentía que no avanzaba. Sin embargo, al trabajar con Inma no solo desde la palabra sino también desde el cuerpo, experimenté un cambio profundo.</p>
-        <p class="testimonial-name">Sara B.</p>
-      </article>
-
-      <article class="testimonial-card" aria-hidden="true">
-        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
-        <p class="testimonial-text">Valoro muy positivamente mi proceso con Inma a lo largo de más de 18 sesiones. Me he sentido acompañado en todo momento y con la confianza de poder expresar mis emociones, incluso en los momentos más difíciles.</p>
-        <p class="testimonial-name">Antonio G.</p>
-      </article>
-
-      <article class="testimonial-card" aria-hidden="true">
-        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
-        <p class="testimonial-text">Mis sesiones con Inma han sido una auténtica revelación. Mi cuerpo estaba cargando con emociones profundas que no había atendido. Inma me guió con sensibilidad y cuidado. ¡Un trabajo increíble!</p>
-        <p class="testimonial-name">Pinta K.</p>
-      </article>
-
-      <article class="testimonial-card" aria-hidden="true">
-        <span class="testimonial-quote-mark" aria-hidden="true">"</span>
-        <p class="testimonial-text">Durante mi trabajo con Inma, me di cuenta de lo desconectada que estaba de mi cuerpo. Después de nuestro trabajo, estoy comiendo mejor, descansando y haciendo ejercicio. Duermo mejor y me siento más feliz.</p>
-        <p class="testimonial-name">Paula T.</p>
-      </article>
-
-    </div>
+    <div class="testimonials-track"></div>
   </div>
 
 </section>
@@ -548,6 +382,7 @@
   <div class="container">
 
     <h2 id="events-heading" class="section-heading"
+        data-content-key="events_heading"
         data-en="Upcoming Events"
         data-es="Próximos Eventos">Upcoming Events</h2>
 
@@ -569,6 +404,7 @@
   <div class="container">
 
     <h2 id="contact-heading" class="section-heading"
+        data-content-key="contact_heading"
         data-en="Get in Touch"
         data-es="Ponte en Contacto">Get in Touch</h2>
 

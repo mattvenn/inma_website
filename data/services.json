@@ -1,0 +1,54 @@
+[
+  {
+    "key": "dmp",
+    "label": {"en": "Psychotherapy", "es": "Terapia"},
+    "title": {"en": "Dance Movement Psychotherapy", "es": "Danza Movimiento Terapia"},
+    "short": {
+      "en": "Individual and group Dance Movement Psychotherapy sessions for adults. Face-to-face or online. First 30-minute consultation is free.",
+      "es": "Sesiones individuales y grupales de Danza Movimiento Terapia para adultos. Presencial o en línea. Primera consulta de 30 minutos gratuita."
+    },
+    "detail": {
+      "en": "<p>Dance Movement Psychotherapy (DMP) is an integrative and humanistic approach that uses movement and body awareness as a pathway to psychological wellbeing. Drawing on attachment theory, trauma-informed practice, Gestalt and somatic approaches, our work together honours the wisdom of the body.</p>\n<p>Sessions are available individually or in groups, face-to-face in Valencia or online worldwide. A free 30-minute initial consultation lets us explore whether working together feels right.</p>\n<p><strong>Fees:</strong> €55 per individual session (50 min). Group session fees vary — please get in touch for details.</p>",
+      "es": "<p>La Danza Movimiento Terapia (DMT) es un enfoque integrador y humanista que utiliza el movimiento y la conciencia corporal como vía hacia el bienestar psicológico. Basándonos en la teoría del apego, la práctica informada en trauma, la Gestalt y los enfoques somáticos, nuestro trabajo honra la sabiduría del cuerpo.</p>\n<p>Las sesiones están disponibles de forma individual o grupal, en Valencia o en línea. Una consulta inicial gratuita de 30 minutos nos permite explorar si trabajar juntas/os nos parece adecuado.</p>\n<p><strong>Honorarios:</strong> €50 por sesión individual (50 min). Las sesiones de grupo varían — contáctame para más información.</p>"
+    }
+  },
+  {
+    "key": "sbm",
+    "label": {"en": "Body Mapping", "es": "Mapeo Corporal"},
+    "title": {"en": "Somatic Body Mapping", "es": "Mapeo Corporal Somático"},
+    "short": {
+      "en": "A therapeutic, body-led creative process to explore and visually communicate the stories you carry in your body.",
+      "es": "Un proceso creativo y terapéutico que te invita a explorar y comunicar visualmente las historias que vives en tu cuerpo."
+    },
+    "detail": {
+      "en": "<p>Somatic Body Mapping (SBM) invites you to paint a life-size representation of your body onto canvas, guided by somatic awareness. The result is a deeply personal artwork that gives form to inner experience — sensations, emotions, memories and meaning.</p>\n<p>Available individually and in groups, SBM is especially supportive during times of transition — loss and grief, illness, menopause, birth, arriving in a new country. No artistic experience is needed.</p>\n<p>A free 30-minute consultation is available to explore if this is the right approach for you.</p>",
+      "es": "<p>El Mapeo Corporal Somático te invita a pintar una representación a tamaño natural de tu cuerpo en un lienzo, guiada/o por la conciencia somática. El resultado es una obra de arte profundamente personal que da forma a la experiencia interior: sensaciones, emociones, recuerdos y significado.</p>\n<p>Disponible de forma individual y grupal, especialmente beneficioso en momentos de transición: pérdida y duelo, enfermedad, menopausia, maternidad, llegada a un nuevo país. No se necesita experiencia artística.</p>\n<p>Consulta inicial gratuita de 30 minutos disponible.</p>"
+    }
+  },
+  {
+    "key": "supervision",
+    "label": {"en": "Supervision", "es": "Supervisión"},
+    "title": {"en": "Clinical Supervision", "es": "Supervisión Clínica"},
+    "short": {
+      "en": "Individual and group supervision for Dance Movement Psychotherapists, creative psychotherapists, and professionals in the care sector.",
+      "es": "Supervisión individual y grupal para DMT, psicoterapeutas creativos y profesionales del sector sociosanitario."
+    },
+    "detail": {
+      "en": "<p>Supervision is offered from a creative and embodied perspective, drawing on role play, imagery, movement exploration, group sculpts and body shaping. The aim is to support reflective, ethical and creative practice.</p>\n<p>Suitable for Dance Movement Psychotherapists, creative arts therapists, psychotherapists, social workers, counsellors and other care professionals.</p>\n<p><strong>Fees:</strong> €60 per individual session (60 min). Group supervision fees vary — please get in touch.</p>",
+      "es": "<p>La supervisión se ofrece desde una perspectiva creativa y encarnada: juego de roles, imágenes, exploración del movimiento, esculturas grupales y modelado corporal. El objetivo es apoyar una práctica reflexiva, ética y creativa.</p>\n<p>Adecuada para DMT, terapeutas de artes creativas, psicoterapeutas, trabajadores sociales, orientadores y otros profesionales del sector sociosanitario.</p>\n<p><strong>Honorarios:</strong> €60 por sesión individual (60 min). Grupos: consultar.</p>"
+    }
+  },
+  {
+    "key": "training",
+    "label": {"en": "Training", "es": "Formación"},
+    "title": {"en": "Training &amp; Workshops", "es": "Formación y Talleres"},
+    "short": {
+      "en": "Training for individuals and organisations including an Introduction to Dance Movement Psychotherapy course.",
+      "es": "Formación para personas y organizaciones, incluyendo un curso de Introducción a la Danza Movimiento Terapia."
+    },
+    "detail": {
+      "en": "<p>The Introduction to Dance Movement Psychotherapy course is designed for psychotherapists, creative psychotherapists, social workers, coaches and helping professionals. It equips participants with body-based and creative DMP tools to enrich their existing practice.</p>\n<p>Training is also available for organisations wishing to integrate movement-based approaches into their work with staff or clients.</p>\n<p>Book a free 30-minute consultation to find out more about current course dates and content.</p>",
+      "es": "<p>El curso de Introducción a la Danza Movimiento Terapia está diseñado para psicoterapeutas, terapeutas de artes creativas, trabajadores sociales, coaches y otros profesionales de ayuda. Proporciona herramientas corporales y creativas de la DMT para enriquecer la práctica existente.</p>\n<p>También se ofrece formación para organizaciones que deseen integrar enfoques basados en el movimiento en su trabajo con el personal o los clientes.</p>\n<p>Reserva una consulta gratuita de 30 minutos para obtener más información sobre las fechas y el contenido del curso.</p>"
+    }
+  }
+]
