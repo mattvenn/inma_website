@@ -129,8 +129,8 @@ def process_content(rows):
             continue
         en = row.get('en', '')
         es = row.get('es', '')
-        # Multi-line fields (bio, pullquote paragraphs) get HTML wrapping
-        html_keys = {'about_bio', 'about_pullquote'}
+        # Multi-paragraph fields get HTML wrapping; single-line fields stay as plain text
+        html_keys = {'about_bio'}
         if key in html_keys:
             result[key] = {'en': text_to_html(en), 'es': text_to_html(es)}
         else:
