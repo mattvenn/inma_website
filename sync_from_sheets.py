@@ -28,7 +28,7 @@ import urllib.error
 from datetime import datetime
 
 SCRIPT_DIR   = os.path.dirname(os.path.abspath(__file__))
-CONFIG_FILE  = os.path.join(SCRIPT_DIR, 'sheets_config.json')
+CONFIG_FILE  = os.environ.get('SHEETS_CONFIG', os.path.join(SCRIPT_DIR, 'sheets_config.json'))
 DATA_DIR     = os.path.join(SCRIPT_DIR, 'data')
 EVENTS_FILE  = os.path.join(SCRIPT_DIR, 'events', 'events.json')
 
