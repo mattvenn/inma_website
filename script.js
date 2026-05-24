@@ -268,7 +268,7 @@ function renderEvents(events) {
 }
 
 function initEvents() {
-  fetch('events/events.json')
+  fetch('events/events.json', { cache: 'no-store' })
     .then(r => {
       if (!r.ok) throw new Error('Could not load events');
       return r.json();
@@ -379,10 +379,12 @@ document.addEventListener('DOMContentLoaded', () => {
   initActiveNav();
 
   // Load all JSON content then apply language
+  const fetchJSON = url => fetch(url, { cache: 'no-store' }).then(r => r.json());
+
   Promise.all([
-    fetch('data/content.json').then(r => r.json()).catch(() => ({})),
-    fetch('data/services.json').then(r => r.json()).catch(() => []),
-    fetch('data/testimonials.json').then(r => r.json()).catch(() => []),
+    fetchJSON('data/content.json').catch(() => ({})),
+    fetchJSON('data/services.json').catch(() => []),
+    fetchJSON('data/testimonials.json').catch(() => []),
   ]).then(([content, services, testimonials]) => {
     applyContent(content);
     applyServices(services);
