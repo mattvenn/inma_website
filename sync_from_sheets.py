@@ -193,8 +193,10 @@ def process_events(rows):
 
 def write_json(path, data):
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, 'w', encoding='utf-8') as f:
+    tmp = path + '.tmp'
+    with open(tmp, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+    os.replace(tmp, path)  # atomic on POSIX — readers never see a partial file
     print(f'  wrote {os.path.relpath(path, SCRIPT_DIR)}')
 
 
