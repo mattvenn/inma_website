@@ -307,6 +307,18 @@ def _build_tokens(content, services, testimonials, events):
             tokens[f'{key}_en'] = _esc(en)
             tokens[f'{key}_es'] = _esc(es)
 
+    hero_title = content.get('hero_title') or {}
+    hero_title_en = hero_title.get('en') or ''
+    hero_title_es = hero_title.get('es') or hero_title_en
+    for suffix, text in (('en', hero_title_en), ('es', hero_title_es)):
+        words = text.split()
+        move  = words[0]      if words else ''
+        being = words[-1]     if len(words) > 1 else ''
+        mid   = ' '.join(words[1:-1]) if len(words) > 2 else ''
+        tokens[f'hero_title_move_{suffix}']  = _esc(move)
+        tokens[f'hero_title_mid_{suffix}']   = _esc(mid)
+        tokens[f'hero_title_being_{suffix}'] = _esc(being)
+
     html_service_fields = {'detail'}
     for svc in services:
         k = svc['key']
