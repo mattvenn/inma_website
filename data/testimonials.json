@@ -1,25 +1,5 @@
 [
   {
-    "name": "Alicia",
-    "quote": {
-      "en": null,
-      "es": null
-    },
-    "video": {
-      "en": "bk-vPkYProo"
-    }
-  },
-  {
-    "name": "Sarah",
-    "quote": {
-      "en": null,
-      "es": null
-    },
-    "video": {
-      "es": "7deBsqrTKWA"
-    }
-  },
-  {
     "name": "Laura L.",
     "quote": {
       "en": "Therapy with Inma consisted of allowing the body to express itself freely. I discovered something I had not suspected: that our body holds traces that speak louder than words.",
@@ -42,6 +22,26 @@
       "es": "Ayer tuve una sesión preciosa con Inma y no puedo recomendar su trabajo lo suficiente. Escucha con mucha profundidad y con pequeños ajustes me ha ayudado a lograr cambios profundos. ¡Es un auténtico tesoro!"
     },
     "video": {}
+  },
+  {
+    "name": "Alicia",
+    "quote": {
+      "en": null,
+      "es": null
+    },
+    "video": {
+      "en": "bk-vPkYProo"
+    }
+  },
+  {
+    "name": "Sarah",
+    "quote": {
+      "en": null,
+      "es": null
+    },
+    "video": {
+      "es": "7deBsqrTKWA"
+    }
   },
   {
     "name": "Tammy M.",
