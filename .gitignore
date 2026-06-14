@@ -4,3 +4,5 @@ sheets_config.json
 inma_content.xlsx
 make_sheet.py
 index.html
+data/*.json
+events/events.json
