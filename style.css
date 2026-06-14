@@ -534,6 +534,44 @@ body[data-lang="es"] .lang-es {
   margin-bottom: 0;
 }
 
+.service-drawer-cta {
+  column-span: all;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ===========================
+   YOUTUBE EMBED
+   =========================== */
+.youtube-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 24px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  break-inside: avoid;
+}
+
+.youtube-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.youtube-embed--small {
+  max-width: 320px;
+  margin: 16px auto;
+}
+
+.service-drawer-cta .btn {
+  padding: 14px 32px;
+  font-size: 0.95rem;
+  border-width: 1px;
+}
+
 /* ===========================
    ABOUT
    =========================== */
@@ -607,6 +645,13 @@ body[data-lang="es"] .lang-es {
   background: var(--sage-light);
   color: var(--text);
   letter-spacing: 0.03em;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.badge:hover {
+  background: var(--sage);
+  color: var(--white);
 }
 
 /* ===========================
@@ -782,6 +827,7 @@ body[data-lang="es"] .lang-es {
 #contact {
   padding: calc(var(--section-py) * 0.4) 0 var(--section-py);
   background: var(--bg-alt);
+  scroll-margin-top: 68px;
 }
 
 .contact-inner {

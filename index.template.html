@@ -12,7 +12,7 @@
 
   <!-- Design tokens first, then site styles -->
   <link rel="stylesheet" href="config.css" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=8" />
 </head>
 
 <body data-lang="en">
@@ -169,6 +169,11 @@
       <div class="service-drawer-inner">
         <div class="lang-en">{{dmp_detail_en}}</div>
         <div class="lang-es">{{dmp_detail_es}}</div>
+        <div class="service-drawer-cta">
+          <a href="#contact" class="btn btn-outline"
+             data-en="{{service_cta_en}}"
+             data-es="{{service_cta_es}}">{{service_cta_en}}</a>
+        </div>
       </div>
     </div>
   </article>
@@ -200,6 +205,11 @@
       <div class="service-drawer-inner">
         <div class="lang-en">{{sbm_detail_en}}</div>
         <div class="lang-es">{{sbm_detail_es}}</div>
+        <div class="service-drawer-cta">
+          <a href="#contact" class="btn btn-outline"
+             data-en="{{service_cta_en}}"
+             data-es="{{service_cta_es}}">{{service_cta_en}}</a>
+        </div>
       </div>
     </div>
   </article>
@@ -231,6 +241,11 @@
       <div class="service-drawer-inner">
         <div class="lang-en">{{supervision_detail_en}}</div>
         <div class="lang-es">{{supervision_detail_es}}</div>
+        <div class="service-drawer-cta">
+          <a href="#contact" class="btn btn-outline"
+             data-en="{{service_cta_en}}"
+             data-es="{{service_cta_es}}">{{service_cta_en}}</a>
+        </div>
       </div>
     </div>
   </article>
@@ -262,6 +277,11 @@
       <div class="service-drawer-inner">
         <div class="lang-en">{{training_detail_en}}</div>
         <div class="lang-es">{{training_detail_es}}</div>
+        <div class="service-drawer-cta">
+          <a href="#contact" class="btn btn-outline"
+             data-en="{{service_cta_en}}"
+             data-es="{{service_cta_es}}">{{service_cta_en}}</a>
+        </div>
       </div>
     </div>
   </article>
@@ -299,8 +319,8 @@
         <div class="about-bio lang-es">{{about_bio_es}}</div>
 
         <div class="about-memberships" aria-label="Professional memberships">
-          <span class="badge">ADMPUK</span>
-          <span class="badge">ADMTE</span>
+          <a class="badge" href="https://www.admp.org.uk/dmp/what-is-dance-movement-psychotherapy" target="_blank" rel="noopener noreferrer">ADMPUK</a>
+          <a class="badge" href="https://danzamovimientoterapia.com/dmt/" target="_blank" rel="noopener noreferrer">ADMTE</a>
         </div>
       </div>
 
@@ -505,6 +525,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=3"></script>
+<script src="script.js?v=4"></script>
 </body>
 </html>

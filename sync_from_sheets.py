@@ -100,24 +100,50 @@ def rows_to_dicts(rows):
 # Text helpers
 # ---------------------------------------------------------------------------
 
-def text_to_html(text):
-    """Convert plain text with newlines and **bold** markers to HTML paragraphs."""
+YOUTUBE_RE = re.compile(
+    r'^(?:https?://)?(?:www\.)?'
+    r'(?:youtube(?:-nocookie)?\.com/(?:watch\?v=|embed/|shorts/)|youtu\.be/)'
+    r'([A-Za-z0-9_-]{11})(?:[?&]\S*)?$'
+)
+
+
+def youtube_embed_html(video_id, size='default'):
+    """Return a responsive YouTube embed. size='small' renders a narrower player
+    (e.g. for testimonial cards) instead of the full-width default."""
+    size_class = ' youtube-embed--small' if size == 'small' else ''
+    return (
+        f'<div class="youtube-embed{size_class}">'
+        f'<iframe src="https://www.youtube-nocookie.com/embed/{video_id}" '
+        f'title="YouTube video player" loading="lazy" '
+        f'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" '
+        f'referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+        f'</div>'
+    )
+
+
+def text_to_html(text, embed_size='default'):
+    """Convert plain text with newlines and **bold** markers to HTML paragraphs.
+    A line containing only a YouTube URL is rendered as an embedded video instead."""
     if not text:
         return ''
     lines = [l.strip() for l in text.split('\n') if l.strip()]
     html_lines = []
     for line in lines:
+        m = YOUTUBE_RE.match(line)
+        if m:
+            html_lines.append(youtube_embed_html(m.group(1), embed_size))
+            continue
         line = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', line)
         html_lines.append(f'<p>{line}</p>')
     return '\n'.join(html_lines)
 
 
-def bilingual(row, en_key, es_key, html=False):
+def bilingual(row, en_key, es_key, html=False, embed_size='default'):
     en = row.get(en_key, '')
     es = row.get(es_key, '')
     if html:
-        en = text_to_html(en)
-        es = text_to_html(es)
+        en = text_to_html(en, embed_size)
+        es = text_to_html(es, embed_size)
     return {'en': en or None, 'es': es or None}
 
 
@@ -167,9 +193,17 @@ def process_testimonials(rows):
         name = row.get('name', '').strip()
         if not name:
             continue
+        quote = bilingual(row, 'quote_en', 'quote_es')
+        video = {}
+        for lang in ('en', 'es'):
+            m = YOUTUBE_RE.match((quote.get(lang) or '').strip())
+            if m:
+                video[lang] = m.group(1)
+                quote[lang] = None
         result.append({
             'name':  name,
-            'quote': bilingual(row, 'quote_en', 'quote_es'),
+            'quote': quote,
+            'video': video,
         })
     return result
 
@@ -204,18 +238,28 @@ def _val(bilingual_dict, lang):
     return d.get(lang) or d.get('en' if lang == 'es' else 'es') or ''
 
 def _build_testimonials_html(testimonials, lang):
-    items = [t for t in testimonials if (t.get('quote') or {}).get(lang)]
+    items = [
+        t for t in testimonials
+        if (t.get('quote') or {}).get(lang) or (t.get('video') or {}).get(lang)
+    ]
     if not items:
         return ''
     cards = []
     for i, t in enumerate([*items, *items]):
         hidden = ' aria-hidden="true"' if i >= len(items) else ''
-        quote = _esc(t['quote'][lang])
-        name  = _esc(t['name'])
+        name = _esc(t['name'])
+        video_id = (t.get('video') or {}).get(lang)
+        if video_id:
+            body = youtube_embed_html(video_id, 'small')
+        else:
+            quote = _esc(t['quote'][lang])
+            body = (
+                '<span class="testimonial-quote-mark" aria-hidden="true">“</span>\n'
+                f'        <p class="testimonial-text">{quote}</p>'
+            )
         cards.append(
             f'      <article class="testimonial-card"{hidden}>\n'
-            f'        <span class="testimonial-quote-mark" aria-hidden="true">“</span>\n'
-            f'        <p class="testimonial-text">{quote}</p>\n'
+            f'        {body}\n'
             f'        <p class="testimonial-name">{name}</p>\n'
             f'      </article>'
         )

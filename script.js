@@ -67,7 +67,8 @@ function initServices() {
     const photoCol = section.querySelector('.service-photo-col');
     const imgA     = section.querySelector('.service-photo');
 
-    section.addEventListener('click', () => {
+    section.addEventListener('click', (e) => {
+      if (e.target.closest('.service-drawer-cta')) return;
       const isExpanded = section.classList.toggle('expanded');
       if (btn)    btn.setAttribute('aria-expanded', String(isExpanded));
       if (drawer) drawer.setAttribute('aria-hidden', String(!isExpanded));
