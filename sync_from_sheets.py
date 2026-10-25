@@ -123,18 +123,32 @@ def youtube_embed_html(video_id, size='default'):
 
 def text_to_html(text, embed_size='default'):
     """Convert plain text with newlines and **bold** markers to HTML paragraphs.
+    Consecutive lines starting with "-" become a bulleted list.
     A line containing only a YouTube URL is rendered as an embedded video instead."""
     if not text:
         return ''
     lines = [l.strip() for l in text.split('\n') if l.strip()]
     html_lines = []
+    in_list = False
     for line in lines:
+        is_item = line.startswith('-') and not line.startswith('--')
+        if in_list and not is_item:
+            html_lines.append('</ul>')
+            in_list = False
         m = YOUTUBE_RE.match(line)
         if m:
             html_lines.append(youtube_embed_html(m.group(1), embed_size))
             continue
         line = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', line)
-        html_lines.append(f'<p>{line}</p>')
+        if is_item:
+            if not in_list:
+                html_lines.append('<ul class="text-list">')
+                in_list = True
+            html_lines.append(f'<li>{line[1:].strip()}</li>')
+        else:
+            html_lines.append(f'<p>{line}</p>')
+    if in_list:
+        html_lines.append('</ul>')
     return '\n'.join(html_lines)
 
 
@@ -265,6 +279,28 @@ def _build_testimonials_html(testimonials, lang):
         )
     return '\n'.join(cards)
 
+def _parse_faq(text):
+    """Split FAQ text into (question, answer) pairs; each question is a line starting with ###."""
+    items = []
+    for line in (text or '').split('\n'):
+        if line.strip().startswith('###'):
+            items.append([line.strip().lstrip('#').strip(), []])
+        elif items:
+            items[-1][1].append(line)
+    return [(q, '\n'.join(a)) for q, a in items if q]
+
+def _build_faq_html(faq, lang):
+    items = _parse_faq((faq or {}).get(lang)) or _parse_faq(_val(faq, lang))
+    parts = []
+    for q, a in items:
+        parts.append(
+            '      <details class="faq-item">\n'
+            f'        <summary class="faq-question">{_esc(q)}<span class="faq-icon" aria-hidden="true"></span></summary>\n'
+            f'        <div class="faq-answer">{text_to_html(_esc(a))}</div>\n'
+            '      </details>'
+        )
+    return '\n'.join(parts)
+
 def _build_events_html(events):
     cards = []
     for event in events:
@@ -366,15 +402,25 @@ def _build_tokens(content, services, testimonials, events):
     html_service_fields = {'detail'}
     for svc in services:
         k = svc['key']
-        for field in ('label', 'title', 'short'):
+        for field in ('label', 'title'):
             tokens[f'{k}_{field}_en'] = _esc(_val(svc.get(field), 'en'))
             tokens[f'{k}_{field}_es'] = _esc(_val(svc.get(field), 'es'))
+        # Each line of the short text becomes its own paragraph
+        tokens[f'{k}_short_en'] = text_to_html(_esc(_val(svc.get('short'), 'en')))
+        tokens[f'{k}_short_es'] = text_to_html(_esc(_val(svc.get('short'), 'es')))
         for field in html_service_fields:
             tokens[f'{k}_{field}_en'] = _val(svc.get(field), 'en')
             tokens[f'{k}_{field}_es'] = _val(svc.get(field), 'es')
 
     tokens['testimonials_en_html'] = _build_testimonials_html(testimonials, 'en')
     tokens['testimonials_es_html'] = _build_testimonials_html(testimonials, 'es')
+
+    faq = content.get('FAQ')
+    tokens['faq_en_html'] = _build_faq_html(faq, 'en')
+    tokens['faq_es_html'] = _build_faq_html(faq, 'es')
+    tokens['faq_section_style'] = '' if tokens['faq_en_html'] else 'style="display:none"'
+    tokens.setdefault('faq_heading_en', 'Frequently Asked Questions')
+    tokens.setdefault('faq_heading_es', 'Preguntas frecuentes')
 
     upcoming = _filter_upcoming(events)
     if upcoming:

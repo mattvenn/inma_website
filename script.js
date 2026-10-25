@@ -71,8 +71,24 @@ function initServices() {
       if (e.target.closest('.service-drawer-cta')) return;
       const isExpanded = section.classList.toggle('expanded');
       if (btn)    btn.setAttribute('aria-expanded', String(isExpanded));
-      if (drawer) drawer.setAttribute('aria-hidden', String(!isExpanded));
+      if (!drawer) return;
+      drawer.setAttribute('aria-hidden', String(!isExpanded));
+      // Animate to the content's real height (no fixed cap), then release it
+      // so later changes (language switch, resize) aren't clipped.
+      drawer.style.maxHeight = drawer.scrollHeight + 'px';
+      if (!isExpanded) {
+        drawer.offsetHeight; // force reflow so the collapse animates from full height
+        drawer.style.maxHeight = '';
+      }
     });
+
+    if (drawer) {
+      drawer.addEventListener('transitionend', (e) => {
+        if (e.propertyName === 'max-height' && section.classList.contains('expanded')) {
+          drawer.style.maxHeight = 'none';
+        }
+      });
+    }
 
     let images;
     try { images = JSON.parse(section.dataset.images || '[]'); } catch (e) { return; }
@@ -161,13 +177,15 @@ function initParallax() {
    ACTIVE NAV SECTION
    =========================== */
 function initActiveNav() {
-  const sections = document.querySelectorAll('section[id]');
+  // Service cards are observed too, so Therapy / Services highlight per card;
+  // data-nav-target maps an element to the nav link it should activate.
+  const sections = document.querySelectorAll('section[id], .service-section');
   const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
-      const id = entry.target.id;
+      const id = entry.target.dataset.navTarget || entry.target.id;
       navLinks.forEach(link => {
         const active = link.getAttribute('href') === `#${id}`;
         link.classList.toggle('active', active);

@@ -12,7 +12,7 @@
 
   <!-- Design tokens first, then site styles -->
   <link rel="stylesheet" href="config.css" />
-  <link rel="stylesheet" href="style.css?v=8" />
+  <link rel="stylesheet" href="style.css?v=23" />
 </head>
 
 <body data-lang="en">
@@ -35,7 +35,10 @@
         <li><a href="#hero"
                data-en="Home"
                data-es="Inicio">Home</a></li>
-        <li><a href="#services"
+        <li><a href="#therapy"
+               data-en="Therapy"
+               data-es="Terapia">Therapy</a></li>
+        <li><a href="#body-mapping"
                data-en="Services"
                data-es="Servicios">Services</a></li>
         <li><a href="#about"
@@ -44,6 +47,9 @@
         <li><a href="#testimonials"
                data-en="Testimonials"
                data-es="Testimonios">Testimonials</a></li>
+        <li><a href="#faq"
+               data-en="FAQ"
+               data-es="Preguntas">FAQ</a></li>
         <li><a href="#contact"
                data-en="Contact"
                data-es="Contacto">Contact</a></li>
@@ -73,7 +79,10 @@
       <a href="#hero"
          data-en="Home"
          data-es="Inicio">Home</a>
-      <a href="#services"
+      <a href="#therapy"
+         data-en="Therapy"
+         data-es="Terapia">Therapy</a>
+      <a href="#body-mapping"
          data-en="Services"
          data-es="Servicios">Services</a>
       <a href="#about"
@@ -82,6 +91,9 @@
       <a href="#testimonials"
          data-en="Testimonials"
          data-es="Testimonios">Testimonials</a>
+      <a href="#faq"
+         data-en="FAQ"
+         data-es="Preguntas">FAQ</a>
       <a href="#contact"
          data-en="Contact"
          data-es="Contacto">Contact</a>
@@ -103,10 +115,6 @@
   <div class="container">
     <div class="hero-content">
 
-      <span class="hero-eyebrow"
-            data-en="{{hero_eyebrow_en}}"
-            data-es="{{hero_eyebrow_es}}">{{hero_eyebrow_en}}</span>
-
       <h1 class="hero-title" aria-label="{{hero_title_en}}">
         <span class="hero-title-move" data-en="{{hero_title_move_en}}" data-es="{{hero_title_move_es}}">{{hero_title_move_en}}</span>
         <span class="hero-title-into" data-en="{{hero_title_mid_en}}" data-es="{{hero_title_mid_es}}">{{hero_title_mid_en}}</span>
@@ -116,10 +124,6 @@
       <p class="hero-subtitle"
          data-en="{{hero_subtitle_en}}"
          data-es="{{hero_subtitle_es}}">{{hero_subtitle_en}}</p>
-
-      <p class="hero-intro"
-         data-en="{{hero_intro_en}}"
-         data-es="{{hero_intro_es}}">{{hero_intro_en}}</p>
 
       <div class="hero-ctas">
         <a href="#contact" class="btn btn-primary"
@@ -137,7 +141,7 @@
 <!-- ===========================
      SERVICES
      =========================== -->
-<section id="services" aria-labelledby="services-heading">
+<section id="services" data-nav-target="therapy" aria-labelledby="services-heading">
   <div class="container">
     <h2 id="services-heading" class="section-heading"
         data-en="{{services_heading_en}}"
@@ -145,7 +149,7 @@
   </div>
 
   <!-- Service 1: DMP — photo LEFT -->
-  <article class="service-section" data-service-key="dmp" data-images='["images/dmp/floating_scarf.webp","images/dmp/fun_scarfs.webp"]' aria-label="Dance Movement Psychotherapy">
+  <article id="therapy" class="service-section" data-service-key="dmp" data-images='["images/dmp/floating_scarf.webp","images/dmp/fun_scarfs.webp"]' aria-label="Dance Movement Psychotherapy">
     <div class="service-header">
       <div class="service-photo-col">
         <img class="service-photo"
@@ -153,14 +157,14 @@
              alt="A colourful scarf floating through the air during a movement session" />
       </div>
       <div class="service-text-col">
-        <span class="service-label"
-              data-en="{{dmp_label_en}}"
-              data-es="{{dmp_label_es}}">{{dmp_label_en}}</span>
         <h3 class="service-title"
             data-en="{{dmp_title_en}}"
             data-es="{{dmp_title_es}}">{{dmp_title_en}}</h3>
-        <p class="service-short lang-en">{{dmp_short_en}}</p>
-        <p class="service-short lang-es">{{dmp_short_es}}</p>
+        <p class="service-subtitle"
+           data-en="{{dmp_label_en}}"
+           data-es="{{dmp_label_es}}">{{dmp_label_en}}</p>
+        <div class="service-short lang-en">{{dmp_short_en}}</div>
+        <div class="service-short lang-es">{{dmp_short_es}}</div>
         <button class="service-expand-btn" aria-expanded="false">
           <span class="lang-en">Read more</span><span class="lang-es">Leer más</span>
           <span class="service-expand-arrow">↓</span>
@@ -181,7 +185,7 @@
   </article>
 
   <!-- Service 2: Body Mapping — photo RIGHT -->
-  <article class="service-section service-section--flip" data-service-key="sbm" data-images='["images/body_mapping/lying_down_drawing.webp","images/body_mapping/bluebody.webp","images/body_mapping/hand_reaching.webp","images/body_mapping/hand_string.webp","images/body_mapping/lying_down.webp"]' aria-label="Somatic Body Mapping">
+  <article id="body-mapping" class="service-section service-section--flip" data-service-key="sbm" data-images='["images/body_mapping/lying_down_drawing.webp","images/body_mapping/bluebody.webp","images/body_mapping/hand_reaching.webp","images/body_mapping/hand_string.webp","images/body_mapping/lying_down.webp"]' aria-label="Somatic Body Mapping">
     <div class="service-header">
       <div class="service-photo-col">
         <img class="service-photo"
@@ -189,14 +193,11 @@
              alt="A body map drawing created during a somatic body mapping session" />
       </div>
       <div class="service-text-col">
-        <span class="service-label"
-              data-en="{{sbm_label_en}}"
-              data-es="{{sbm_label_es}}">{{sbm_label_en}}</span>
         <h3 class="service-title"
             data-en="{{sbm_title_en}}"
             data-es="{{sbm_title_es}}">{{sbm_title_en}}</h3>
-        <p class="service-short lang-en">{{sbm_short_en}}</p>
-        <p class="service-short lang-es">{{sbm_short_es}}</p>
+        <div class="service-short lang-en">{{sbm_short_en}}</div>
+        <div class="service-short lang-es">{{sbm_short_es}}</div>
         <button class="service-expand-btn" aria-expanded="false">
           <span class="lang-en">Read more</span><span class="lang-es">Leer más</span>
           <span class="service-expand-arrow">↓</span>
@@ -217,7 +218,7 @@
   </article>
 
   <!-- Service 3: Supervision — photo LEFT -->
-  <article class="service-section" data-service-key="supervision" data-images='["images/body_mapping/hand_reaching.webp","images/abstract/abstract_hand.webp","images/abstract/abstract_fibres.webp","images/abstract/feathers.webp"]' aria-label="Supervision">
+  <article class="service-section" data-service-key="supervision" data-nav-target="body-mapping" data-images='["images/body_mapping/hand_reaching.webp","images/abstract/abstract_hand.webp","images/abstract/abstract_fibres.webp","images/abstract/feathers.webp"]' aria-label="Supervision">
     <div class="service-header">
       <div class="service-photo-col">
         <img class="service-photo"
@@ -225,14 +226,11 @@
              alt="A hand reaching upward, suggesting support and therapeutic connection" />
       </div>
       <div class="service-text-col">
-        <span class="service-label"
-              data-en="{{supervision_label_en}}"
-              data-es="{{supervision_label_es}}">{{supervision_label_en}}</span>
         <h3 class="service-title"
             data-en="{{supervision_title_en}}"
             data-es="{{supervision_title_es}}">{{supervision_title_en}}</h3>
-        <p class="service-short lang-en">{{supervision_short_en}}</p>
-        <p class="service-short lang-es">{{supervision_short_es}}</p>
+        <div class="service-short lang-en">{{supervision_short_en}}</div>
+        <div class="service-short lang-es">{{supervision_short_es}}</div>
         <button class="service-expand-btn" aria-expanded="false">
           <span class="lang-en">Read more</span><span class="lang-es">Leer más</span>
           <span class="service-expand-arrow">↓</span>
@@ -253,7 +251,7 @@
   </article>
 
   <!-- Service 4: Training — photo RIGHT -->
-  <article class="service-section service-section--flip" data-service-key="training" data-images='["images/training_and_workshops/two_dancers.webp","images/training_and_workshops/blurred_feet.webp","images/training_and_workshops/candles.webp","images/training_and_workshops/colourful_string.webp","images/training_and_workshops/feet_lying_down.webp","images/training_and_workshops/green_inma_talking.webp"]' aria-label="Training and Workshops">
+  <article class="service-section service-section--flip" data-service-key="training" data-nav-target="body-mapping" data-images='["images/training_and_workshops/two_dancers.webp","images/training_and_workshops/blurred_feet.webp","images/training_and_workshops/candles.webp","images/training_and_workshops/colourful_string.webp","images/training_and_workshops/feet_lying_down.webp","images/training_and_workshops/green_inma_talking.webp"]' aria-label="Training and Workshops">
     <div class="service-header">
       <div class="service-photo-col">
         <img class="service-photo"
@@ -261,14 +259,11 @@
              alt="Two people dancing expressively together in a workshop setting" />
       </div>
       <div class="service-text-col">
-        <span class="service-label"
-              data-en="{{training_label_en}}"
-              data-es="{{training_label_es}}">{{training_label_en}}</span>
         <h3 class="service-title"
             data-en="{{training_title_en}}"
             data-es="{{training_title_es}}">{{training_title_en}}</h3>
-        <p class="service-short lang-en">{{training_short_en}}</p>
-        <p class="service-short lang-es">{{training_short_es}}</p>
+        <div class="service-short lang-en">{{training_short_en}}</div>
+        <div class="service-short lang-es">{{training_short_es}}</div>
         <button class="service-expand-btn" aria-expanded="false">
           <span class="lang-en">Read more</span><span class="lang-es">Leer más</span>
           <span class="service-expand-arrow">↓</span>
@@ -352,6 +347,26 @@
     </div>
   </div>
 
+</section>
+
+
+<!-- ===========================
+     FAQ
+     =========================== -->
+<section id="faq" aria-labelledby="faq-heading" {{faq_section_style}}>
+  <div class="container">
+    <h2 id="faq-heading" class="section-heading"
+        data-en="{{faq_heading_en}}"
+        data-es="{{faq_heading_es}}">{{faq_heading_en}}</h2>
+
+    <div class="faq-list lang-en">
+{{faq_en_html}}
+    </div>
+
+    <div class="faq-list lang-es">
+{{faq_es_html}}
+    </div>
+  </div>
 </section>
 
 
@@ -503,7 +518,10 @@
         <a href="#hero"
            data-en="Home"
            data-es="Inicio">Home</a>
-        <a href="#services"
+        <a href="#therapy"
+           data-en="Therapy"
+           data-es="Terapia">Therapy</a>
+        <a href="#body-mapping"
            data-en="Services"
            data-es="Servicios">Services</a>
         <a href="#about"
@@ -512,6 +530,9 @@
         <a href="#testimonials"
            data-en="Testimonials"
            data-es="Testimonios">Testimonials</a>
+        <a href="#faq"
+           data-en="FAQ"
+           data-es="Preguntas">FAQ</a>
         <a href="#contact"
            data-en="Contact"
            data-es="Contacto">Contact</a>
@@ -529,6 +550,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=4"></script>
+<script src="script.js?v=6"></script>
 </body>
 </html>

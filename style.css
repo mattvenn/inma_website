@@ -244,18 +244,7 @@ body[data-lang="es"] .lang-es {
 .hero-content {
   position: relative;
   z-index: 2;
-  padding-bottom: 80px;
-  padding-top: 48px;
-}
-
-.hero-eyebrow {
-  display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--clay-light);
-  margin-bottom: 20px;
+  padding-bottom: 144px;
 }
 
 /* Three-line creative title */
@@ -298,19 +287,12 @@ body[data-lang="es"] .lang-es {
 }
 
 .hero-subtitle {
-  font-size: 0.88rem;
+  font-family: var(--font-sans);
+  font-size: clamp(0.85rem, 2vw, 1.35rem);
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.55);
-  margin-bottom: 12px;
-  letter-spacing: 0.05em;
-}
-
-.hero-intro {
-  font-size: 1.1rem;
-  line-height: 1.75;
-  color: rgba(255, 255, 255, 0.82);
+  color: var(--clay-light);
   margin-bottom: 36px;
-  max-width: 520px;
+  letter-spacing: 0.12em;
 }
 
 .hero-ctas {
@@ -403,6 +385,7 @@ body[data-lang="es"] .lang-es {
 .service-section {
   border-top: 1px solid var(--border);
   cursor: pointer;
+  scroll-margin-top: 68px;
 }
 
 .service-header {
@@ -442,15 +425,6 @@ body[data-lang="es"] .lang-es {
   background: var(--bg);
 }
 
-.service-label {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--clay);
-  margin-bottom: 14px;
-}
 
 .service-title {
   font-family: var(--font-serif);
@@ -461,12 +435,56 @@ body[data-lang="es"] .lang-es {
   margin-bottom: 18px;
 }
 
+/* Sits under the title; size between title and body text */
+.service-subtitle {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-style: italic;
+  font-weight: 600;
+  color: #7A5A44;
+  line-height: 1.35;
+  margin: -8px 0 18px;
+}
+
 .service-short {
   font-size: 0.97rem;
   color: var(--text-muted);
   line-height: 1.72;
   margin-bottom: 28px;
   max-width: 440px;
+}
+
+.service-short p + p,
+.service-short p + .text-list,
+.service-short .text-list + p {
+  margin-top: 12px;
+}
+
+/* Bulleted lists from "- " lines in the sheet */
+.text-list {
+  list-style: none;
+  margin-bottom: 14px;
+}
+
+.text-list li {
+  position: relative;
+  padding-left: 1.2em;
+  margin-bottom: 6px;
+}
+
+.text-list li::before {
+  content: '';
+  position: absolute;
+  left: 0.2em;
+  top: 0.7em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--clay);
+}
+
+.text-list:last-child {
+  margin-bottom: 0;
 }
 
 .service-expand-btn {
@@ -509,7 +527,6 @@ body[data-lang="es"] .lang-es {
 }
 
 .service-section.expanded .service-drawer {
-  max-height: 600px;
   opacity: 1;
   border-top-width: 1px;
 }
@@ -728,6 +745,90 @@ body[data-lang="es"] .lang-es {
 /* ===========================
    EVENTS
    =========================== */
+/* ===========================
+   FAQ
+   =========================== */
+#faq {
+  padding: var(--section-py) 0;
+  background: var(--bg);
+}
+
+.faq-list {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-item:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 22px 0;
+  list-style: none;
+  cursor: pointer;
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text);
+  transition: color 0.2s;
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-question:hover {
+  color: var(--clay);
+}
+
+.faq-icon::before {
+  content: '+';
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--clay);
+  transition: transform 0.3s ease;
+}
+
+.faq-item[open] .faq-icon::before {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  padding-bottom: 24px;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+.faq-answer p + p {
+  margin-top: 12px;
+}
+
+/* Smooth unfold in browsers that support it; others just open instantly */
+.faq-item {
+  interpolate-size: allow-keywords;
+}
+
+.faq-item::details-content {
+  block-size: 0;
+  overflow: hidden;
+  transition: block-size 0.35s ease, content-visibility 0.35s allow-discrete;
+}
+
+.faq-item[open]::details-content {
+  block-size: auto;
+}
+
 #events {
   padding: var(--section-py) 0;
   background: var(--bg);
@@ -1039,8 +1140,13 @@ body[data-lang="es"] .lang-es {
     display: block;
   }
 
-  /* Hero */
+  /* Hero — size to content instead of filling the screen */
+  #hero {
+    min-height: auto;
+  }
+
   .hero-content {
+    padding-top: 40px;
     padding-bottom: 56px;
   }
 
@@ -1050,10 +1156,6 @@ body[data-lang="es"] .lang-es {
 
   .hero-title-being {
     font-size: clamp(3rem, 12vw, 4.5rem);
-  }
-
-  .hero-intro {
-    max-width: 100%;
   }
 
   /* Services — stack on mobile */
